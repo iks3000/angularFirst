@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="col-6">
+      <h6>Example 1</h6>
+      <p *ngIf="condition; else unset">Hello</p>
+      <ng-template #unset>
+        <p>goodbye</p>
+      </ng-template>
+      <button class="btn btn-primary shadow-none" (click)="toggle()">ngIf toggle</button>
+    </div>
+
+    <div class="col-6">
+      <h6>Example 2</h6>
+      <div *ngIf="condition2; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+        <p>Then template</p>
+      </ng-template>
+      <ng-template #elseBlock>
+        <p>Else template</p>
+      </ng-template>
+      <button class="btn btn-primary shadow-none" (click)="toggle2()">ngIf Toggle</button>
+    </div>
+
+  </div>
+</div>
+
+
+

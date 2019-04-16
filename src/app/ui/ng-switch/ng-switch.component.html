@@ -1,0 +1,14 @@
+
+<div class="row d-flex justify-content-center">
+  <div class="col-4 text-center">
+    <h6>ngSwitchCase</h6>
+    <input class="form-control" type="text"  [(ngModel)] ="count">
+    <p> Count is = <strong>{{count}}</strong></p>
+    <div class="text-center" [ngSwitch]="count">
+      <ng-template ngSwitchCase="1">{{count * 10}}</ng-template>
+      <ng-template ngSwitchCase="2">{{count * 100}}</ng-template>
+      <ng-template ngSwitchDefault>{{count * 1000}}</ng-template>
+    </div>
+  </div>
+
+</div>

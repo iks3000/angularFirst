@@ -1,0 +1,16 @@
+
+<div class="row text-center d-flex justify-content-center">
+  <div class="col-4">
+    <h6>ngFor</h6>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of items">{{item}}</li>
+    </ul>
+  </div>
+  <div class="col-4">
+    <h6>ngFor with index</h6>
+    <ul class="list-group text-left">
+      <li class="list-group-item" *ngFor="let item of items; let i = index">{{i+1}}. {{item}}</li>
+    </ul>
+  </div>
+</div>
+
