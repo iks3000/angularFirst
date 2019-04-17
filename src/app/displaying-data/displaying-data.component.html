@@ -1,0 +1,23 @@
+
+  <ul class="list-group">
+    <li class="list-group-item">
+      <p>Привязка элемента DOM к значению компонента (односторонняя). Например:</p>
+      <p>Welcome <code>{{name}}</code></p>
+    </li>
+    <li class="list-group-item">
+      <p>Привязка свойства элемента html к значению компонента (односторонняя). Например:</p>
+      <input class="form-control" type="text" [value]="inputText" />
+    </li>
+    <li class="list-group-item">
+      <p>Привязка метода компонента к событию в DOM (генерация события в DOM вызывает метод на компоненте)(односторонняя). Например:</p>
+      <p>Количество кликов: <code>{{count}}</code></p>
+      <button class="btn btn-warning" (click)="increase($event)">Click</button>
+    </li>
+    <li class="list-group-item">
+      <p>Двусторонняя привязка, когда элемент DOM привязан к значению на компоненте, при этом изменения на одном конце привязки сразу приводят к изменениям на другом конце. Например:</p>
+      <p>Привет <code>{{anotherName}}</code></p>
+      <input class="form-control mb-2" type="text" [(ngModel)]="anotherName" />
+      <input class="form-control" type="text" [(ngModel)]="anotherName" />
+    </li>
+  </ul>
+
